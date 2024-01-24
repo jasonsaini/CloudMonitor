@@ -19,5 +19,5 @@ def index():
         message = "Hight Memory AND High CPU Utilization"
     return f"CPU Utilization: {cpu_percentage}, Memory Utilization: {mem_percentage}"
         
-if __name__ = '__main__':
+if __name__ == '__main__':
     app.run(debug = True, host= '0.0.0.0')
