@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    cpu_percentage = psutil.cpu_percent()
+    cpu_percentage = psutil.cpu_percent(interval=1)
     mem_percentage = psutil.virtual_memory().percent
     Message = None
     if cpu_percentage > CPU_THRESHOLD:
