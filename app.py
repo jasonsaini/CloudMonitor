@@ -16,8 +16,9 @@ def index():
     if mem_percentage > MEM_THRESHOLD:
         Message = "High Memory Utilization"
     if mem_percentage > MEM_THRESHOLD and cpu_percentage > CPU_THRESHOLD:
-        message = "Hight Memory AND High CPU Utilization"
-    return f"CPU Utilization: {cpu_percentage}, Memory Utilization: {mem_percentage}"
+        Message = "High Memory AND High CPU Utilization"
+    
+    return render_template("index.html", cpu_percent=cpu_percentage, mem_percent=mem_percentage, message=Message)
         
 if __name__ == '__main__':
     app.run(debug = True, host= '0.0.0.0')
