@@ -1,5 +1,5 @@
 import psutil
-from flask import Flask
+from flask import Flask, render_template
 
 CPU_THRESHOLD = 80
 MEM_THRESHOLD = 80
